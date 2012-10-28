@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://www.grayducklabs.com
+title: Gray Duck Labs
+subtitle: We accelerate uncommon ideas from concept to product to profit.
+author: Gray Duck Labs LLC.
 simple_search: http://google.com/search
-description:
+description: "Web and mobile product design, development and strategy. We accelerate uncommon ideas from concept to product to profit."
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -36,7 +36,7 @@ category_dir: blog/categories
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 
-paginate: 10          # Posts per page on the blog index
+paginate: 4          # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
@@ -60,11 +60,11 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # Github repositories
 github_user:
 github_repo_count: 0
-github_show_profile_link: true
+github_show_profile_link: false
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: grayducklabs
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -96,4 +96,4 @@ disqus_show_comment_count: false
 google_analytics_tracking_id:
 
 # Facebook Like
-facebook_like: false
+facebook_like: true
