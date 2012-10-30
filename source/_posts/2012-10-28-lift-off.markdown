@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Lift Off"
+date: 2012-3-29 09:02
+author: Charles Worthington
+comments: true
+categories: Gray-Duck-Labs
+---
+
+Today I'm excited to announce the official launch of Gray Duck Labs.
+
+For the past six years, I've worked as a strategy consultant in the technology and telecom industry. I have been lucky to work with [great colleagues](www.altvil.com) and amazing clients across the industry, but what I enjoyed most about my time as a consultant was helping organizations adapt their products to take advantage of changing market conditions.
+
+I started Gray Duck Labs so I could focus exclusively on developing these products, from concept to pitch, pitch to product, and product to profit.
+
+Gray Duck Labs will work with talented designers, engineers and product managers to push their ideas to the next level, whatever that may be. We plan to work with teams of all shapes and sizes, from early-stage startups to Fortune 500 product groups. Depending on the situation, we will provide advisory services, invest in ideas, or just lend a hand when cool folks need a PowerPoint ninja to get them through next week's meeting.
+
+We already have some great projects in the works, and are always interested in doing more. Drop us a line today to find out how we can work together!

@@ -2,41 +2,28 @@
 layout: default
 ---
 
-<div id="front-wrapper">
-  <div id="hero">
-    <div id="hero-inner" class="container">
-      {% include custom/hero.html %}
-    </div>
-  </div>
-  <section id="sub-hero">
-    <div class="container">
-      {% include custom/hero_widgets.html %}
-    </div>
-  </section>
-  <div class="container">
-    <div class="row">
-    {% assign index = true %}
-    {% for post in paginator.posts %}
-    {% assign content = post.content %}
-      <article class="span4">
-        {% include article.html %}
-      </article>
-    {% endfor %}
-    </div>
-      <div class="row">
-        <ul class="pager">
-          {% if paginator.next_page %}
-            <li class="previous">
-              <a href="{{paginator.next_page}}">&larr; Older</a>
-            </li>
-          {% endif %}
-          {% if paginator.previous_page %}
-            <li class="next">
-              <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
+<div class="blog-index">
+  {% assign index = true %}
+  {% for post in paginator.posts %}
+  {% assign content = post.content %}
+    <article>
+      {% include article.html %}
+    </article>
+  {% endfor %}
+  <div class="pagination">
+    {% if paginator.next_page %}
+      <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
+    {% endif %}
+    <a href="/blog/archives">Blog Archives</a>
+    {% if paginator.previous_page %}
+    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+    {% endif %}
   </div>
 </div>
-
+<aside class="sidebar">
+  {% if site.blog_index_asides.size %}
+    {% include_array blog_index_asides %}
+  {% else %}
+    {% include_array default_asides %}
+  {% endif %}
+</aside>

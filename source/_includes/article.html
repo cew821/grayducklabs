@@ -1,4 +1,3 @@
-<div class="article-format">
 {% unless page.no_header %}
   <header>
     {% if index %}
@@ -8,9 +7,7 @@
     {% endif %}
     {% unless page.meta == false %}
       <p class="meta">
-        {% include post/author.html %} - 
-        {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %} - 
-        {% include post/categories.html %}
+        {% include post/date.html %}{{ time }}
         {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}
          | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a>
         {% endif %}
@@ -27,21 +24,5 @@
     </footer>
   {% endif %}
 {% else %}
-  <div class="entry-content">{{ content }}</div>
+<div class="entry-content">{{ content }}</div>
 {% endif %}
-{% unless index %}
-  <footer>
-    <p class="meta">
-      {% include post/author.html %}
-      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-      {% include post/categories.html %}
-    </p>
-    {% if page.previous.url %}
-      <a class="pull-left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
-    {% endif %}
-    {% if page.next.url %}
-      <a class="pull-right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
-    {% endif %}
-  </footer>
-{% endunless %}
-</div>

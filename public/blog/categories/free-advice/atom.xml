@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Free-Advice | Gray Duck Labs]]></title>
+  <link href="http://www.grayducklabs.com/blog/categories/free-advice/atom.xml" rel="self"/>
+  <link href="http://www.grayducklabs.com/"/>
+  <updated>2012-10-29T19:28:17-07:00</updated>
+  <id>http://www.grayducklabs.com/</id>
+  <author>
+    <name><![CDATA[Gray Duck Labs LLC.]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Why is the World Series Unavailable for Streaming?]]></title>
+    <link href="http://www.grayducklabs.com/blog/2012/why-is-the-world-series-unavailable-for-streaming-s/"/>
+    <updated>2012-10-25T09:20:00-07:00</updated>
+    <id>http://www.grayducklabs.com/blog/2012/why-is-the-world-series-unavailable-for-streaming-s</id>
+    <content type="html"><![CDATA[<p>Dear Fox Sports &amp; MLB,</p>
+
+<p>I tried to watch the World Series tonight, but it seems you haven't yet figured out a way to monetize a live stream of a World Series game and instead have chosen to black it out online. This, despite the fact that you broadcast this same game for free on TV.</p>
+
+<p>It's 2012. If this is the best you can do, you're going to have a really bad time over the next five years. If you need any advice, feel free to get in touch.</p>
+
+<p>Sincerely,  the Internet</p>
+]]></content>
+  </entry>
+  
+</feed>
