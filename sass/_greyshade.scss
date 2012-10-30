@@ -67,7 +67,7 @@ body {
 			
 			#content {
 				width: 100%;
-				
+
 				.tagline {
 					background: whitesmoke;
 					padding-top: 250px;
@@ -76,8 +76,43 @@ body {
 				  font-weight: bold;
 				  color: #555;
 					line-height: 30px;
+					margin-bottom: 80px;
 				}
 
+				.tag {
+						width: 33%;
+						// background: whitesmoke;
+						// float: left;
+						vertical-align: top;
+						display: inline-block;
+						font-size: 30px;
+						font-weight: bold;
+						height: 100%;
+						margin: 1%;
+					}
+					.description {
+						width: 60%;
+						// background: $greyshade;
+						display: inline-block;
+						height: 100%;
+						font-size: 18px;
+					}
+
+				.about-section {
+					margin-top: 40px;
+					height: 100%;
+					color: #555;
+					// background: black;
+					.pic {
+					  border: 1px solid #fff;
+					  display: inline-block;
+					  float: right;
+					  margin: 10px;
+					  // height: 194px;
+					  // margin-bottom: 28px;
+					}
+					// color: white;
+				}
 
 				article {
 					border-top: none;
@@ -217,6 +252,7 @@ body {
 		.credit-box {
 			display: none;
 		}
+
 		.left-col {
 			position: relative;
 			width: 100%;
@@ -247,6 +283,7 @@ body {
 				}
 			}
 		}
+
 		.mid-col {
 			float: none;
 			width: 100%;
