@@ -1,0 +1,16 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+
+<body>
+  <div class="container">
+    <div class="left-col">
+      <header id="header" class="inner">
+        {% include header.html %}
+      </header>
+    </div>    
+    
+    {{ content | expand_urls: root_url }}
+
+  </div>
+</body>
+</html>
