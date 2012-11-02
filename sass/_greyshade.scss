@@ -8,12 +8,13 @@ body {
 }
 
 #header {
-	height: auto;
+	// height: auto;
 	border-bottom: none;
 
 	#sub-nav {
 		float: none;
 		position: relative;
+		text-align: center;
 		.social {
 			float: none;
 		}
@@ -66,7 +67,11 @@ body {
 		background: #aaa;
 		border-top: 1px solid #888;
 	}
-
+	.about-container {
+		background: #fff;
+		border-top: 1px solid #999;
+	}
+	
 	.mid-col {
 		float: right;
 		width: 60%;
@@ -84,19 +89,20 @@ body {
 					font-size: 24pt;
 				  font-weight: bold;
 					line-height: 30px;
-					margin-bottom: 180px;
+					margin-bottom: 250px;
 				}
 
 				.subway {
 					float: right;
-					margin-top: -68px;
+					margin-top: -43px;
 					margin-right: 20px;
+					margin-bottom: 20px;
 					vertical-align: top;
 				}
 
-				.subway-tag {
+				.subway-tag-top {
 					float: right;
-					margin-top: -110px;
+					margin-top: -95px;
 					vertical-align: top;
 					text-align: right;
 					color: white;
@@ -104,19 +110,39 @@ body {
 					font-weight: bold;
 				}
 
-				.service-description {
-					// width: 60%;
-					margin-right: 120px;
-					margin-left: 80px;
-					margin-top: 20px;
+				.subway-tag {
+					float: right;
+					margin-right: 20px;
+					margin-top: -25px;
+					vertical-align: top;
 					text-align: right;
-					// display: inline-block;
-					// height: 100%;
+					color: white;
+					font-size: 32px;
+					font-weight: bold;
+				}
+
+				.projects {
+					margin-top: 30px;
+					text-align: center;
+					font-size: 32px;
+					font-weight: bold;
+				}
+
+				.service-description {
+					margin-right: 120px;
+					margin-left: 15%;
+					padding-top: 20px;
+					text-align: right;
+					height: 245px;
+					// border: 1px solid white;
+					// background: #333;
 					font-size: 18px;
 				}
 
-
-
+				.bottom {
+					height: 100%;
+					margin-bottom: 30px;
+				}
 
 				.service-tag {
 					// width: 33%;
@@ -124,7 +150,7 @@ body {
 					// display: inline-block;
 					text-align: right;
 					color: white;
-					font-size: 30px;
+					font-size: 32px;
 					font-weight: bold;
 					height: 100%;
 					margin: 1%;
@@ -139,6 +165,7 @@ body {
 						height: 100%;
 						margin: 1%;
 					}
+
 					.description {
 						width: 60%;
 						// background: $greyshade;
@@ -148,9 +175,8 @@ body {
 					}
 
 				.about-section {
-					margin-top: 40px;
+					margin-top: 30px;
 					height: 100%;
-					color: #555;
 					// background: black;
 					.pic {
 					  border: 1px solid #fff;
@@ -229,11 +255,18 @@ body {
 		background-color: $GDL-yellow;
 
 		.site-logo {
-			font-family: "PT Sans", Tahoma, Arial, sans-serif;
-			font-size: 80pt;
-		  font-weight: bold;
-		  color: #fff;
-			line-height: 110px;
+
+			width: 100%;
+			margin-top: 30px;
+			.container {
+				font-family: "PT Sans", Tahoma, Arial, sans-serif;
+				font-size: 80pt;
+			  font-weight: bold;
+			  color: #fff;
+				line-height: 110px;
+				width: 230px;
+				margin: 0 auto;
+			}
 			
 			img {
 				margin-left: 40px;
@@ -245,22 +278,24 @@ body {
 
 		#header {
 			width: 100%;
-			padding-left: 20%;
-			padding-right: 15%;
-			padding-top: 20%;
-			// padding: 20% 0% 0% 15%;
+
 			#main-nav {
 				margin-top: 10px;
 			}
 
 			a {
-				color: #EFEFEF;
-				text-shadow: 0 1px #333;
+				color: #fff;
 			}
 			a:hover {
-				color: $greyshade;
+				text-shadow: 0px 1px #999;
+				color: #FCFCFC;
 			}
 			#sub-nav {
+				display: block;
+				width: 100%;
+				text-align: center;
+				margin-right: 0px;
+
 				.search::before {
 					left: 10px;
 				}
@@ -297,7 +332,7 @@ a:hover {
 
 body {
 	@media screen and (max-width: 1040px){
-			margin: 0 0;
+		margin: 0 0;
 	}
 }
 @media screen and (max-width: 700px){
@@ -310,12 +345,16 @@ body {
 			position: relative;
 			width: 100%;
 			.site-logo {
-				font-size: 50pt;
-				line-height: 70px;
-				img {
-					margin-left: 0px;
-					width: 80px;
-					text-align: center;
+				margin-top: 0px;
+				.container { 
+					font-size: 60pt;
+					line-height: 80px;
+					img {
+						margin-left: 0px;
+						margin-top: 10px;
+						width: 80px;
+						text-align: center;
+					}
 				}
 			}
 
@@ -324,6 +363,7 @@ body {
 				text-align: center;
 				#sub-nav{
 					display: block;
+					margin-bottom: 30px;
 				}
 				#main-nav {
 					ul {	
@@ -345,6 +385,7 @@ body {
 				#content {
 					.tagline {
 						padding-top: 0px;
+						margin-bottom: 90px;
 					}
 					article {
 						.meta {

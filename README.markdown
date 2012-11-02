@@ -1,9 +1,9 @@
-grayducklabs
+Gray Duck Labs
 ============
 
-Website for my design/development and strategy consulting business: Gray Duck Labs
+Website for my freelance product design/strategy/development business: Gray Duck Labs. 
 
-Built using [Octopress](Octopress.org) and the [foxslide](https://github.com/sevenadrian/foxslide) theme by Adrian Artiles.
+Built using [Octopress](Octopress.org). Thanks to [Greyshade](https://github.com/shashankmehta/greyshade) and [Slash](https://github.com/tommy351/Octopress-Theme-Slash) for theme design inspiration and starting points.
 
 ## License
 (The MIT License)

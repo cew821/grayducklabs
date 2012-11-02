@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: contact@grayducklabs.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -58,10 +58,13 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: cew821
 github_repo_count: 0
 github_show_profile_link: false
 github_skip_forks: true
+
+# Linked-In
+linkedin_user: charlesworthington
 
 # Twitter
 twitter_user: grayducklabs
@@ -97,3 +100,4 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: true
+facebook_user: grayducklabs
