@@ -8,13 +8,13 @@ body {
 }
 
 #header {
-	// height: auto;
 	border-bottom: none;
 
 	#sub-nav {
 		float: none;
 		position: relative;
 		text-align: center;
+		top: 0px;
 		.social {
 			float: none;
 		}
@@ -82,6 +82,12 @@ body {
 			#content {
 				width: 100%;
 				color: #555;
+				a {
+					color: $greyshade;
+				}
+				a:hover {
+					text-decoration: underline;
+				}
 
 				.tagline {
 					padding-top: 250px;
@@ -255,9 +261,9 @@ body {
 		background-color: $GDL-yellow;
 
 		.site-logo {
-
 			width: 100%;
 			margin-top: 30px;
+			margin-bottom: 0px;
 			.container {
 				font-family: "PT Sans", Tahoma, Arial, sans-serif;
 				font-size: 80pt;
@@ -267,40 +273,61 @@ body {
 				width: 230px;
 				margin: 0 auto;
 			}
-			
 			img {
 				margin-left: 40px;
 				margin-top: 5px;
 				// text-align: center;
 				width: 120px;
 			}
+			
 		}
+
+
 
 		#header {
 			width: 100%;
+			a {
+				color: #fff;
+			}
+			
+			a:hover {
+				text-shadow: 0px 1px #999;
+				color: #FCFCFC;
+				text-decoration: none;
+			}
+
+			.navigation {
+				margin-bottom: 20px;
+				float: none;
+				margin-right: 15px;
+				font-size: 14px;
+				font-weight: bold;
+				a { 
+					color: #555;
+				}
+				a:hover {
+					color: #555;
+					text-shadow: none;
+					text-decoration: underline;
+				}
+			}
 
 			#main-nav {
 				margin-top: 10px;
 			}
 
-			a {
-				color: #fff;
-			}
-			a:hover {
-				text-shadow: 0px 1px #999;
-				color: #FCFCFC;
-			}
 			#sub-nav {
 				display: block;
 				width: 100%;
 				text-align: center;
-				margin-right: 0px;
+				top: 0px;
 
 				.search::before {
 					left: 10px;
 				}
 				.social {
 					margin-bottom: 10px;
+					margin-right: 0px;
 				}
 			}
 		}
@@ -322,19 +349,12 @@ body {
 	}
 }
 
-a {
-	color: $greyshade;
-}
-
-a:hover {
-	color: $greyshade;
-}
-
 body {
 	@media screen and (max-width: 1040px){
-		margin: 0 0;
+		margin: 0;
 	}
 }
+
 @media screen and (max-width: 700px){
 	.container {
 		.credit-box {

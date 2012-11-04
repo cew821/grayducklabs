@@ -1,13 +1,16 @@
 <div class="site-logo">
 	<div class="container">
-		<a href="{{ root_url }}" title="Gray Duck Labs | Home">
+		<a href="{{ root_url }}/" title="Gray Duck Labs | Home">
 		Gray<br>
 		Duck<br>
 		Labs<br>
 		<img src="images/grayduck.gif" width="140" alt="Logo: a gray rubber duck"></a>	
 	</div>
 </div>
-<nav id="sub-nav" class="alignright">
+<nav id="sub-nav">
+	<div class="navigation">
+		<a href="{{ root_url }}/" title="Home">Home</a> | <a href="{{ root_url }}/blog" title="Blog">Blog</a> | <a href="{{ root_url }}/#Contact" title="Contact">Contact</a> | <a href="https://tinyletter.com/grayducklabs" title="Newsletter">Newsletter</a>
+	</div>
 	<div class="social">
 		{% if site.facebook_user %}
 		<a class="facebook" href="http://www.facebook.com/{{ site.facebook_user }}" title="Facebook">Facebook</a>
@@ -31,7 +34,7 @@
 		<a class="delicious" href="http://delicious.com/{{ site.delicious_user }}" title="Delicious">Delicious</a>
 		{% endif %}
 		{% if site.subscribe_rss %}
-		<a class="rss" href="{{ site.subscribe_rss }}" title="RSS">RSS</a>
+		<a class="rss" href="{{ site.subscribe_rss }}" title="RSS">RSS</a> 
 		{% endif %}
 	</div>
 </nav>
