@@ -9,7 +9,7 @@ categories: Gray-Duck-Labs
 
 Today I'm excited to announce the official launch of Gray Duck Labs.
 
-For the past six years, I've worked as a strategy consultant in the technology and telecom industry. I have been lucky to work with [great colleagues](www.altvil.com) and amazing clients across the industry, but what I enjoyed most about my time as a consultant was helping organizations adapt their products to take advantage of changing market conditions.
+For the past six years, I've worked as a strategy consultant in the technology and telecom industry. I have been lucky to work with [great colleagues](http://www.altvil.com) and amazing clients across the industry, but what I enjoyed most about my time as a consultant was helping organizations adapt their products to take advantage of changing market conditions.
 
 I started Gray Duck Labs so I could focus exclusively on developing these products, from concept to pitch, pitch to product, and product to profit.
 

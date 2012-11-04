@@ -3,7 +3,7 @@
 
 
 body {
-	background: #3D4349;
+	background: $GDL-light-grey;
 	font-family: "Open Sans", "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -59,6 +59,7 @@ body {
 		}
 	}
 
+
 // Color backgrounds for each main sections
 	.tagline-container{
 		background: $GDL-yellow;
@@ -68,17 +69,21 @@ body {
 		border-top: 1px solid #888;
 	}
 	.about-container {
-		background: #fff;
+		background: $GDL-light-grey;
 		border-top: 1px solid #999;
+	}
+	.blog-container {
+		background: $GDL-light-grey;
 	}
 	
 	.mid-col {
 		float: right;
 		width: 60%;
+		height: 100%;
 
 		.mid-col-container {
 			padding: 0px 70px 0px 40px;
-			
+
 			#content {
 				width: 100%;
 				color: #555;
@@ -201,13 +206,17 @@ body {
 
 				article {
 					border-top: none;
+					border-bottom: 1px solid #ccc;
+					font-family: Lucida, Tahoma, Arial, sans-serif;
+					font-size: 14px;
+
 					.title {
 						margin-left: 0px;
 					}
 					.entry-content {
 						margin-left: 0px;
 						blockquote {
-							border-left: 5px solid $greyshade;
+							border-left: 5px solid $GDL-yellow;
 							background: #FCFCFC;
 						}
 					}
@@ -231,8 +240,11 @@ body {
 					}
 
 					h1.title{
+						font-weight: bold;
+						font-family: "PT Sans", Tahoma, Arial, sans-serif;
+
 						a {
-							color: #333;
+							color: #555;
 							-webkit-transition: color 0.3s;
 							-moz-transition: color 0.3s;
 							-o-transition: color 0.3s;
@@ -250,10 +262,16 @@ body {
 			}
 		}
 		footer {
+			border-top: none;
 			width: 100%;
+			padding-right: 100px;
+			// margin-left: 15px;
+			a {
+				color: $greyshade;
+			}
 		}
 	}
-	
+
 	.left-col {
 		width: 40%;
 		height: 100%;
