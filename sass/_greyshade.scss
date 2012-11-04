@@ -171,7 +171,7 @@ body {
 						width: 33%;
 						vertical-align: top;
 						display: inline-block;
-						font-size: 30px;
+						font-size: 32px;
 						font-weight: bold;
 						height: 100%;
 						margin: 1%;
@@ -207,7 +207,7 @@ body {
 				article {
 					border-top: none;
 					border-bottom: 1px solid #ccc;
-					font-family: Lucida, Tahoma, Arial, sans-serif;
+					font-family: Tahoma, Arial, sans-serif;
 					font-size: 14px;
 
 					.title {
@@ -215,6 +215,11 @@ body {
 					}
 					.entry-content {
 						margin-left: 0px;
+						line-height: 1.8;
+						p {
+							margin-bottom: 24px;
+						}
+
 						blockquote {
 							border-left: 5px solid $GDL-yellow;
 							background: #FCFCFC;
@@ -374,6 +379,7 @@ body {
 }
 
 @media screen and (max-width: 700px){
+
 	.container {
 		.credit-box {
 			display: none;
@@ -425,6 +431,17 @@ body {
 						padding-top: 0px;
 						margin-bottom: 90px;
 					}
+
+					.description { 
+						font-size: 14px;
+					}
+					.tag {
+						font-size: 24px;
+					}
+					.service-description {
+						font-size: 14px;
+					}
+
 					article {
 						.meta {
 							float: none;
