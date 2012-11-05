@@ -210,13 +210,19 @@ body {
 					font-family: Tahoma, Arial, sans-serif;
 					font-size: 14px;
 
+					img {
+						display: block;
+						margin-left: auto;
+						margin-right: auto;
+					}
+
 					.title {
 						margin-left: 0px;
 					}
 					.entry-content {
 						margin-left: 0px;
 						line-height: 1.8;
-						p {
+						p, ul, ol {
 							margin-bottom: 24px;
 						}
 
@@ -269,7 +275,7 @@ body {
 		footer {
 			border-top: none;
 			width: 100%;
-			padding-right: 100px;
+			// padding-right: 100px;
 			// margin-left: 15px;
 			a {
 				color: $greyshade;

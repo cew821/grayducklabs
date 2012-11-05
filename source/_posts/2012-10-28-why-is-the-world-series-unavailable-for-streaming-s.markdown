@@ -4,7 +4,7 @@ title: "Why is the World Series Unavailable for Streaming?"
 date: 2012-10-25 09:20
 author: Charles Worthington
 comments: true
-categories: Free-Advice
+categories: [Free Advice]
 ---
 
 Dear Fox Sports & MLB,
@@ -13,4 +13,5 @@ I tried to watch the World Series tonight, but it seems you haven't yet figured 
 
 It's 2012. If this is the best you can do, you're going to have a really bad time over the next five years. If you need any advice, feel free to get in touch.
 
-Sincerely,  the Internet
+Sincerely,   
+the Internet

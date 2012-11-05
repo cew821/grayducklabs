@@ -2,7 +2,7 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://www.grayducklabs.com/blog/2012/lift-off/</loc>
-        <lastmod>2012-11-03T22:46:02-07:00</lastmod>
+        <lastmod>2012-11-04T08:06:06-08:00</lastmod>
     </url>
     <url>
         <loc>http://www.grayducklabs.com/blog/2012/disruptive-design/</loc>
@@ -16,15 +16,19 @@
         <loc>
             http://www.grayducklabs.com/blog/2012/why-is-the-world-series-unavailable-for-streaming-s/
         </loc>
-        <lastmod>2012-11-03T22:37:44-07:00</lastmod>
+        <lastmod>2012-11-04T18:33:48-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.grayducklabs.com/blog/2012/introducing-the-new-gray-duck-labs/</loc>
+        <lastmod>2012-11-04T18:42:26-08:00</lastmod>
     </url>
     <url>
         <loc>http://www.grayducklabs.com/blog/archives/</loc>
-        <lastmod>2012-11-03T22:46:02-07:00</lastmod>
+        <lastmod>2012-11-04T18:42:26-08:00</lastmod>
     </url>
     <url>
         <loc>http://www.grayducklabs.com/blog/</loc>
-        <lastmod>2012-11-03T22:46:02-07:00</lastmod>
+        <lastmod>2012-11-04T18:42:26-08:00</lastmod>
     </url>
     <url>
         <loc>http://www.grayducklabs.com/contact/</loc>
@@ -32,6 +36,6 @@
     </url>
     <url>
         <loc>http://www.grayducklabs.com/</loc>
-        <lastmod>2012-11-03T22:46:02-07:00</lastmod>
+        <lastmod>2012-11-04T18:42:26-08:00</lastmod>
     </url>
 </urlset>

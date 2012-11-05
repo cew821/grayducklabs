@@ -4,7 +4,7 @@
   <title><![CDATA[Gray Duck Labs]]></title>
   <link href="http://www.grayducklabs.com/atom.xml" rel="self"/>
   <link href="http://www.grayducklabs.com/"/>
-  <updated>2012-11-04T00:21:12-07:00</updated>
+  <updated>2012-11-04T18:49:01-08:00</updated>
   <id>http://www.grayducklabs.com/</id>
   <author>
     <name><![CDATA[Gray Duck Labs LLC.]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rebuilding Gray Duck Labs with Octopress]]></title>
+    <link href="http://www.grayducklabs.com/blog/2012/introducing-the-new-gray-duck-labs/"/>
+    <updated>2012-11-04T00:25:00-07:00</updated>
+    <id>http://www.grayducklabs.com/blog/2012/introducing-the-new-gray-duck-labs</id>
+    <content type="html"><![CDATA[<p>When I chose to leave my awesome <a href="http://www.altvil.com">strategy consulting job</a> to pursue a freelancing career in product design and development, creating a brand to represent myself was one of the first projects I worked on. In a way, I was my own first &#8220;client.&#8221;</p>
+
+<p>Gray Duck Labs was the outcome of this effort. I created a portfolio of branded documents, including a letterhead, a slide and wireframing template, business cards, and of course, a web site.</p>
+
+<p><img src="http://www.grayducklabs.com/images/posts/grayducklabs_old_screenshot.png" title="Screenshot of the old Gray Duck Labs site" ></p>
+
+<p>Since this effort coincided with a personal push to refresh my web development skills, I took the opportunity to design and code my own site, including writing my own blogging engine in Ruby on Rails. Initially I was happy with the result (I kept <a href="http://grayducklabs.herokuapp.com">a copy live on Heroku</a> if you&#8217;re interested). As time passed, however, I became frustrated with the limitations of the blog engine I had created. For example, my engine lacked:</p>
+
+<ul>
+<li>Social sharing buttons</li>
+<li>An article index</li>
+<li>Article tagging</li>
+<li>Named page routes</li>
+<li>Comments</li>
+</ul>
+
+
+<p>None of these features are revolutionary. In fact, these are problems that have been solved <a href="http://www.wordpress.org">many</a> <a href="http://www.blogger.com">times</a> <a href="http://www.squarespace.com">over</a>. As I became busy with actual client work, I found less appeal in the idea of writing these features from scratch &#8220;for fun.&#8221;</p>
+
+<p>Enter <a href="http://www.octopress.org">Octopress</a>. Octopress is a Ruby framework that extends <a href="https://github.com/mojombo/jekyll">Jekyll</a> to allow you to generate a static site that includes many features that would normally require a dynamic web application.</p>
+
+<!-- more -->
+
+
+<p>I chose to use Octopress because it includes many key features out of the box, including social integration and a responsive layout. Being built with Ruby, it was also a good match for my skill set.</p>
+
+<p>I wound up customizing the implementation much more than I was expecting going in. This was because Octopress&#8217;s default theme (and most of the <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">third party themes</a>) are very blog-centered, and apparently not intended to host static marketing content. If you&#8217;re interested in the gory details of how I created the site you&#8217;re looking at, you can <a href="https://github.com/cew821/grayducklabs">check out the source code on GitHub</a>.</p>
+
+<p>Overall, I&#8217;m happy with the transition. I like the design changes I made to the marketing content, and despite the heavy customization required it was helpful to use Octopress&#8217; themes as a starting point for my own responsive design.</p>
+
+<p>But the main benefit to this change is that I can now focus on the content. Writing a new post is as easy as dropping a text file into the <code>/posts</code> directory and running <code>$ rake generate</code> and <code>$ git push heroku</code>.</p>
+
+<h4>Why this might be a bad idea</h4>
+
+<p>In the immediate term, the new site is definitely an improvement, but I do have a few reservations. Mainly, these boil down to two issues:</p>
+
+<ul>
+<li><strong>I need my development machine to make a new post.</strong> Before, I could just log in to my Rails app from any computer to make a change. Now, pushing an update from a location other than my development machine would require a non-trivial configuration process. I also won&#8217;t be able to update the blog from a mobile device.</li>
+<li><strong>It will be nearly impossible for non-coders to contribute.</strong> Though Gray Duck Labs is just me for now, it&#8217;s not inconceivable that at some point there will be other folks I want to contribute to this blog. In a traditional web app (including in my basic Rails implementation), this would be no problem. With Octopress, other contributors would need the ability to make pull requests to my GitHub repo. Fine for developers, pretty much unusable for everyone else.</li>
+</ul>
+
+
+<p>I suspect if it ever gets to that point I&#8217;ll wind up migrating to a more traditional database-driven blog engine like Wordpress. But until then, I&#8217;m happy to be &#8216;blogging like a developer.&#8217;</p>
+
+<p>If you&#8217;ve been using Octopress or Jekyll for your company blog and encountered these issues, or if you&#8217;d like to learn more about my experience, <a href="mailto:%63%6f%6e%74%61%63%74@%67%72%61%79%64%75%63%6b%6c%61%62%73.%63%6f%6d">drop me a line</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Why is the World Series Unavailable for Streaming?]]></title>
@@ -24,7 +77,8 @@
 
 <p>It&#8217;s 2012. If this is the best you can do, you&#8217;re going to have a really bad time over the next five years. If you need any advice, feel free to get in touch.</p>
 
-<p>Sincerely,  the Internet</p>
+<p>Sincerely, <br/>
+the Internet</p>
 ]]></content>
   </entry>
   

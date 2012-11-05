@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Free-Advice | Gray Duck Labs]]></title>
+  <title><![CDATA[Category: Free Advice | Gray Duck Labs]]></title>
   <link href="http://www.grayducklabs.com/blog/categories/free-advice/atom.xml" rel="self"/>
   <link href="http://www.grayducklabs.com/"/>
-  <updated>2012-11-04T00:21:12-07:00</updated>
+  <updated>2012-11-04T18:49:01-08:00</updated>
   <id>http://www.grayducklabs.com/</id>
   <author>
     <name><![CDATA[Gray Duck Labs LLC.]]></name>
@@ -24,7 +24,8 @@
 
 <p>It's 2012. If this is the best you can do, you're going to have a really bad time over the next five years. If you need any advice, feel free to get in touch.</p>
 
-<p>Sincerely,  the Internet</p>
+<p>Sincerely, <br/>
+the Internet</p>
 ]]></content>
   </entry>
   

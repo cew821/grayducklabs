@@ -1,0 +1,173 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rebuilding Gray Duck Labs with Octopress - Gray Duck Labs</title>
+	<meta name="author" content="Gray Duck Labs LLC.">
+
+	
+	<meta name="description" content="When I chose to leave my awesome strategy consulting job to pursue a freelancing career in product design and development, creating a brand to &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Gray Duck Labs" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<header id="header" class="inner">
+				<div class="site-logo">
+	<div class="container">
+		<a href="/" title="Gray Duck Labs | Home">
+		Gray<br>
+		Duck<br>
+		Labs<br>
+		<img src="/images/grayduck.gif" width="140" alt="Logo: a gray rubber duck"></a>	
+	</div>
+</div>
+<nav id="sub-nav">
+	<div class="navigation">
+		<a href="/" title="Home">Home</a> | <a href="/blog" title="Blog">Blog</a> | <a href="/#Contact" title="Contact">Contact</a> | <a href="https://tinyletter.com/grayducklabs" title="Newsletter">Newsletter</a>
+	</div>
+	<div class="social">
+		
+		<a class="facebook" href="http://www.facebook.com/grayducklabs" title="Facebook">Facebook</a>
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/grayducklabs" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/cew821" title="GitHub">GitHub</a>
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/charlesworthington">LinkedIn</a>
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a> 
+		
+	</div>
+</nav>
+
+
+			</header>
+		</div>		
+		<div class="mid-col blog-container">
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<article class="post">
+	<h1 class="title">Rebuilding Gray Duck Labs With Octopress</h1>
+	<div class="entry-content"><p>When I chose to leave my awesome <a href="http://www.altvil.com">strategy consulting job</a> to pursue a freelancing career in product design and development, creating a brand to represent myself was one of the first projects I worked on. In a way, I was my own first &#8220;client.&#8221;</p>
+
+<p>Gray Duck Labs was the outcome of this effort. I created a portfolio of branded documents, including a letterhead, a slide and wireframing template, business cards, and of course, a web site.</p>
+
+<p><img src="/images/posts/grayducklabs_old_screenshot.png" title="Screenshot of the old Gray Duck Labs site" ></p>
+
+<p>Since this effort coincided with a personal push to refresh my web development skills, I took the opportunity to design and code my own site, including writing my own blogging engine in Ruby on Rails. Initially I was happy with the result (I kept <a href="http://grayducklabs.herokuapp.com">a copy live on Heroku</a> if you&#8217;re interested). As time passed, however, I became frustrated with the limitations of the blog engine I had created. For example, my engine lacked:</p>
+
+<ul>
+<li>Social sharing buttons</li>
+<li>An article index</li>
+<li>Article tagging</li>
+<li>Named page routes</li>
+<li>Comments</li>
+</ul>
+
+
+<p>None of these features are revolutionary. In fact, these are problems that have been solved <a href="http://www.wordpress.org">many</a> <a href="http://www.blogger.com">times</a> <a href="http://www.squarespace.com">over</a>. As I became busy with actual client work, I found less appeal in the idea of writing these features from scratch &#8220;for fun.&#8221;</p>
+
+<p>Enter <a href="http://www.octopress.org">Octopress</a>. Octopress is a Ruby framework that extends <a href="https://github.com/mojombo/jekyll">Jekyll</a> to allow you to generate a static site that includes many features that would normally require a dynamic web application.</p>
+
+<!-- more -->
+
+
+<p>I chose to use Octopress because it includes many key features out of the box, including social integration and a responsive layout. Being built with Ruby, it was also a good match for my skill set.</p>
+
+<p>I wound up customizing the implementation much more than I was expecting going in. This was because Octopress&#8217;s default theme (and most of the <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">third party themes</a>) are very blog-centered, and apparently not intended to host static marketing content. If you&#8217;re interested in the gory details of how I created the site you&#8217;re looking at, you can <a href="https://github.com/cew821/grayducklabs">check out the source code on GitHub</a>.</p>
+
+<p>Overall, I&#8217;m happy with the transition. I like the design changes I made to the marketing content, and despite the heavy customization required it was helpful to use Octopress&#8217; themes as a starting point for my own responsive design.</p>
+
+<p>But the main benefit to this change is that I can now focus on the content. Writing a new post is as easy as dropping a text file into the <code>/posts</code> directory and running <code>$ rake generate</code> and <code>$ git push heroku</code>.</p>
+
+<h4>Why this might be a bad idea</h4>
+
+<p>In the immediate term, the new site is definitely an improvement, but I do have a few reservations. Mainly, these boil down to two issues:</p>
+
+<ul>
+<li><strong>I need my development machine to make a new post.</strong> Before, I could just log in to my Rails app from any computer to make a change. Now, pushing an update from a location other than my development machine would require a non-trivial configuration process. I also won&#8217;t be able to update the blog from a mobile device.</li>
+<li><strong>It will be nearly impossible for non-coders to contribute.</strong> Though Gray Duck Labs is just me for now, it&#8217;s not inconceivable that at some point there will be other folks I want to contribute to this blog. In a traditional web app (including in my basic Rails implementation), this would be no problem. With Octopress, other contributors would need the ability to make pull requests to my GitHub repo. Fine for developers, pretty much unusable for everyone else.</li>
+</ul>
+
+
+<p>I suspect if it ever gets to that point I&#8217;ll wind up migrating to a more traditional database-driven blog engine like Wordpress. But until then, I&#8217;m happy to be &#8216;blogging like a developer.&#8217;</p>
+
+<p>If you&#8217;ve been using Octopress or Jekyll for your company blog and encountered these issues, or if you&#8217;d like to learn more about my experience, <a href="mailto:%63%6f%6e%74%61%63%74@%67%72%61%79%64%75%63%6b%6c%61%62%73.%63%6f%6d">drop me a line</a>.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<!-- <a class="addthis_counter addthis_pill_style"></a> -->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+				</div>
+			</div>
+			<footer id="footer" class="inner">
+				Copyright &copy; 2012 
+
+    Gray Duck Labs LLC.
+ |
+<span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | View source on <a href="https://github.com/cew821/grayducklabs" title="GitHub">GitHub</a></span></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36066894-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+		</div>
+	</div>
+</body>
+</html>

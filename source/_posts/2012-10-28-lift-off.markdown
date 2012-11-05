@@ -4,7 +4,7 @@ title: "Lift Off"
 date: 2012-3-29 09:02
 author: Charles Worthington
 comments: true
-categories: Gray-Duck-Labs
+categories: [Gray Duck Labs]
 ---
 
 Today I'm excited to announce the official launch of Gray Duck Labs.
