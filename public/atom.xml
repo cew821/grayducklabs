@@ -4,7 +4,7 @@
   <title><![CDATA[Gray Duck Labs]]></title>
   <link href="http://www.grayducklabs.com/atom.xml" rel="self"/>
   <link href="http://www.grayducklabs.com/"/>
-  <updated>2012-11-04T18:49:01-08:00</updated>
+  <updated>2012-12-21T02:03:23-06:00</updated>
   <id>http://www.grayducklabs.com/</id>
   <author>
     <name><![CDATA[Gray Duck Labs LLC.]]></name>
@@ -14,9 +14,36 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Free Design Idea: Fixing Conference Call Frustration with Software]]></title>
+    <link href="http://www.grayducklabs.com/blog/2012/free-design-idea-fix-conference-calls-with-software/"/>
+    <updated>2012-12-20T23:13:00-06:00</updated>
+    <id>http://www.grayducklabs.com/blog/2012/free-design-idea-fix-conference-calls-with-software</id>
+    <content type="html"><![CDATA[<p>Conference calls are an unfortunate fact of life. No one loves their conference call system, but even in the age of Skype, Join.me, Google+ Hangouts, and countless other ways to collaborate, conference lines remain the standard way for remote teams to communicate. And for good reason: access is universal, and you can participate while driving 65 MPH down the interstate.</p>
+
+<p>One of the most fustrating parts of conference call systems is getting dialed in. If you are anything like me, your dial in process probably works like this:</p>
+
+<p><img src="http://www.grayducklabs.com/images/posts/conf_call_flow.png" title="[Conference Call Flow]" ></p>
+
+<p><strong>Software to the Rescue</strong></p>
+
+<p>The dialer user experience should be adapted to better handle the conference call scenario. Here is one example of how this could work:</p>
+
+<p><img src="http://www.grayducklabs.com/images/posts/new_conf_flow.png" title="[Improved Conference Call Flow Design Suggestion]" ></p>
+
+<p>In many cases, it should be possible for the phone to detect when a user is trying to enter a conference call. Indicators would include initiating a phone call from inside a meeting reminder containing the words &#8220;conference call&#8221;, &#8220;bridge&#8221;, &#8220;passcode&#8221;, &#8220;meeting ID&#8221;, and the like. Meetings with multiple attendees and a phone number in the location field would be another good sign that the user wants to join a conference call.</p>
+
+<p>In these cases, the dialer should open with the keypad open and the OS&#8217;s best guess at the conference passcode listed above the keypad.</p>
+
+<p>A feature like this would prevent a lot of frustration, and save me literally SECONDS each week. If any mobile OS product people are reading this, please discuss this implementing this idea on your next product design call!</p>
+
+<p><em>Charles Worthington (<a href="http://www.twitter.com/cew821" title="Twitter">@cew821</a>) is a freelance product designer living in Washington, DC. He would love to <a href="mailto:%63%6f%6e%74%61%63%74@%67%72%61%79%64%75%63%6b%6c%61%62%73.%63%6f%6d" title="Email Us">hear from you</a>!</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Rebuilding Gray Duck Labs with Octopress]]></title>
     <link href="http://www.grayducklabs.com/blog/2012/introducing-the-new-gray-duck-labs/"/>
-    <updated>2012-11-04T00:25:00-07:00</updated>
+    <updated>2012-11-04T00:25:00-05:00</updated>
     <id>http://www.grayducklabs.com/blog/2012/introducing-the-new-gray-duck-labs</id>
     <content type="html"><![CDATA[<p>When I chose to leave my awesome <a href="http://www.altvil.com">strategy consulting job</a> to pursue a freelancing career in product design and development, creating a brand to represent myself was one of the first projects I worked on. In a way, I was my own first &#8220;client.&#8221;</p>
 
@@ -69,7 +96,7 @@
   <entry>
     <title type="html"><![CDATA[Why is the World Series Unavailable for Streaming?]]></title>
     <link href="http://www.grayducklabs.com/blog/2012/why-is-the-world-series-unavailable-for-streaming-s/"/>
-    <updated>2012-10-25T09:20:00-07:00</updated>
+    <updated>2012-10-25T09:20:00-05:00</updated>
     <id>http://www.grayducklabs.com/blog/2012/why-is-the-world-series-unavailable-for-streaming-s</id>
     <content type="html"><![CDATA[<p>Dear Fox Sports &amp; MLB,</p>
 
@@ -85,7 +112,7 @@ the Internet</p>
   <entry>
     <title type="html"><![CDATA[Usability vs. Advertising]]></title>
     <link href="http://www.grayducklabs.com/blog/2012/usability-vs-advertising/"/>
-    <updated>2012-08-11T09:04:00-07:00</updated>
+    <updated>2012-08-11T09:04:00-05:00</updated>
     <id>http://www.grayducklabs.com/blog/2012/usability-vs-advertising</id>
     <content type="html"><![CDATA[<p>Is good design compatible with advertising? A quick jaunt through some of the Internet&#8217;s most popular web and mobile properties would suggest the answer is mostly no.</p>
 
@@ -126,7 +153,7 @@ the Internet</p>
   <entry>
     <title type="html"><![CDATA[Disruptive Design]]></title>
     <link href="http://www.grayducklabs.com/blog/2012/disruptive-design/"/>
-    <updated>2012-04-13T08:53:00-07:00</updated>
+    <updated>2012-04-13T08:53:00-05:00</updated>
     <id>http://www.grayducklabs.com/blog/2012/disruptive-design</id>
     <content type="html"><![CDATA[<p>We often think of market trends as being driven by disruptive technologies.</p>
 
@@ -147,7 +174,7 @@ the Internet</p>
   <entry>
     <title type="html"><![CDATA[Lift Off]]></title>
     <link href="http://www.grayducklabs.com/blog/2012/lift-off/"/>
-    <updated>2012-03-29T09:02:00-07:00</updated>
+    <updated>2012-03-29T09:02:00-05:00</updated>
     <id>http://www.grayducklabs.com/blog/2012/lift-off</id>
     <content type="html"><![CDATA[<p>Today I&#8217;m excited to announce the official launch of Gray Duck Labs.</p>
 
