@@ -4,7 +4,7 @@
   <title><![CDATA[Gray Duck Labs]]></title>
   <link href="http://www.grayducklabs.com/atom.xml" rel="self"/>
   <link href="http://www.grayducklabs.com/"/>
-  <updated>2012-12-21T10:25:25-06:00</updated>
+  <updated>2012-12-22T07:38:07-06:00</updated>
   <id>http://www.grayducklabs.com/</id>
   <author>
     <name><![CDATA[Gray Duck Labs LLC.]]></name>
@@ -37,6 +37,55 @@
 <p>A feature like this would prevent a lot of frustration, and save me literally SECONDS each week. If any mobile OS product people are reading this, please discuss this implementing this idea on your next product design call!</p>
 
 <p><em>Charles Worthington (<a href="http://www.twitter.com/cew821" title="Twitter">@cew821</a>) is a freelance product designer living in Washington, DC. He would love to <a href="mailto:%63%6f%6e%74%61%63%74@%67%72%61%79%64%75%63%6b%6c%61%62%73.%63%6f%6d" title="Email Us">hear from you</a>!</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Thin Line Between Awesome and Awful in Mobile Advertising]]></title>
+    <link href="http://www.grayducklabs.com/blog/2012/the-thin-line-between-awesome-and-awful-in-mobile-advertising/"/>
+    <updated>2012-11-12T15:03:00-06:00</updated>
+    <id>http://www.grayducklabs.com/blog/2012/the-thin-line-between-awesome-and-awful-in-mobile-advertising</id>
+    <content type="html"><![CDATA[<p>The major difference between a mobile experience and web experience is <strong>Focus.</strong></p>
+
+<p>In desktop environments, our users are comfortable working across multiple contexts at once. They paste Excel charts into PowerPoint slides. They toggle between a half-dozen web tabs, ranging from Fantasy Football to Facebook to the company CRM database. Their mail app constantly streams in new emails, from their boss and from their family and from their airline frequent flyer program.</p>
+
+<p>Advertising on the desktop web exploits this lack of focus by tempting users to click into a new context</p>
+
+<hr />
+
+<p>usually seeking to distract the user from the task she is trying to a</p>
+
+<p>For example, here&#8217;s what my desktop looks like today:</p>
+
+<p><img src="http://www.grayducklabs.com/images/posts/desktop_contexts.png" title="[Desktop Contexts[Screenshot of my multi-contexted, cluttered desktop.]]" ></p>
+
+<p>In this environment, advertising need not to be particularly well-crafted, relevant or tasteful. In fact, in many ways the cacophony of contexts rewards advertising that can grab attention and divert it to a new, ad-sponsored context, just one more open window on the desktop.</p>
+
+<h3>In comparison, our mobile users are almost zen-like in their focus.</h3>
+
+<p>The constraints of the mobile form factor make it incrementally more difficult for users to accomplish most tasks. The best mobile applications overcome this &#8220;usability tax&#8221; by anticipating what tasks users are trying to accomplish each time they open the app, and making these actions easy to discover and fast to use. Anything that distracts from this #fast and easy to accomplish the desired task* dogma can derail an otherwise solid mobile app.</p>
+
+<p>This is why mobile advertising has yet to deliver the profits consumer app creators are counting on. What can be done? Unfort</p>
+
+<h3>Rather than tempt users to switch contexts, mobile advertising most work within the context provided by the content.</h3>
+
+<p>The only succesful advertising on mobile devices is advertising that matches the context of the content. Yelp users are trying to decide where to eat; coupons could help make this decision. Twitter users are trying to learn what&#8217;s new in their interest graph. Promoted tweets that match this graph help them learn something new. YouTube viewers are seeking a few minutes of entertainment. A funny 15 second video ad matches this context, and can be successful.</p>
+
+<p>But it&#8217;s a fine line.</p>
+
+<p>Take, for example, this recent ad I saw when I opened Foursquare.</p>
+
+<p>ad</p>
+
+<p>This is prime realestate for a context-driven advertisement. I want to explore what&#8217;s nearby, Foursquare can charge businesses to pitch me on why I should stop by.</p>
+
+<p>Facebook users want to know what their friends are up to; but this does not usually include wanting to know what virtual goods they have purchased in a game. Foursquare users want to know what&#8217;s nearby</p>
+
+<p>But it&#8217;s a fine line. Take, for example,</p>
+
+<p>New York Times readers are trying to catch up on the days&#8217; top stories. On the other hand,</p>
+
+<p>For mobile advertising to be successful, it must fit within these constraints.</p>
 ]]></content>
   </entry>
   
