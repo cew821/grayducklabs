@@ -2,52 +2,52 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://www.grayducklabs.com/blog/2012/lift-off/</loc>
-        <lastmod>2012-11-04T10:06:06-06:00</lastmod>
+        <lastmod>2012-11-04T11:06:06-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.grayducklabs.com/blog/2012/disruptive-design/</loc>
-        <lastmod>2012-11-04T00:37:44-05:00</lastmod>
+        <lastmod>2012-11-04T01:37:44-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.grayducklabs.com/blog/2012/usability-vs-advertising/</loc>
-        <lastmod>2012-11-12T18:16:21-06:00</lastmod>
+        <lastmod>2012-11-12T19:16:21-05:00</lastmod>
     </url>
     <url>
         <loc>
             http://www.grayducklabs.com/blog/2012/why-is-the-world-series-unavailable-for-streaming-s/
         </loc>
-        <lastmod>2012-11-04T20:33:48-06:00</lastmod>
+        <lastmod>2012-11-04T21:33:48-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.grayducklabs.com/blog/2012/introducing-the-new-gray-duck-labs/</loc>
-        <lastmod>2012-11-04T20:42:26-06:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://www.grayducklabs.com/blog/2012/the-thin-line-between-awesome-and-awful-in-mobile-advertising/
-        </loc>
-        <lastmod>2012-12-21T01:55:25-06:00</lastmod>
+        <lastmod>2012-11-04T21:42:26-05:00</lastmod>
     </url>
     <url>
         <loc>
             http://www.grayducklabs.com/blog/2012/free-design-idea-fix-conference-calls-with-software/
         </loc>
-        <lastmod>2012-12-21T02:01:30-06:00</lastmod>
+        <lastmod>2012-12-21T03:01:30-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.grayducklabs.com/blog/archives/</loc>
-        <lastmod>2012-12-21T02:01:30-06:00</lastmod>
+        <lastmod>2012-12-21T03:01:30-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.grayducklabs.com/blog/</loc>
-        <lastmod>2012-12-21T02:01:30-06:00</lastmod>
+        <lastmod>2012-12-21T03:01:30-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.grayducklabs.com/contact/</loc>
-        <lastmod>2012-11-04T00:37:44-05:00</lastmod>
+        <lastmod>2012-11-04T01:37:44-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://www.grayducklabs.com/drafts/2012-11-12-the-thin-line-between-awesome-and-awful-in-mobile-advertising.html
+        </loc>
+        <lastmod>2013-01-04T19:14:48-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.grayducklabs.com/</loc>
-        <lastmod>2012-12-21T02:01:30-06:00</lastmod>
+        <lastmod>2012-12-21T03:01:30-05:00</lastmod>
     </url>
 </urlset>
