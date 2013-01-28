@@ -2,7 +2,7 @@
 layout: post
 title: "Lift Off"
 date: 2012-3-29 09:02
-author: Charles Worthington
+author: "Charles Worthington"
 comments: true
 categories: [Gray Duck Labs]
 ---
