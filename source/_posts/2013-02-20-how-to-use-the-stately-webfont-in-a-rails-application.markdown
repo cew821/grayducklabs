@@ -6,7 +6,7 @@ comments: true
 categories: [Ruby on Rails]
 ---
 
-A few weeks ago, [Ben Markowitz](https://twitter.com/bpmarkowitz), a UX designer at [Intridea](http://www.intridea.com/) released an open source web font called [Stately](http://intridea.github.com/stately/). Stately allows designers to make simple, great-looking U.S. map visualizations using only HTML and CSS. For example:
+A few weeks ago, [Ben Markowitz](https://twitter.com/bpmarkowitz), a UX designer at [Intridea](http://www.intridea.com/), released an open source web font called [Stately](http://intridea.github.com/stately/). Stately allows designers to make simple, great-looking U.S. map visualizations using only HTML and CSS. For example:
 
 {% img /images/posts/stately_example.jpg [Example of a map created using Stately] %}
 
@@ -40,7 +40,7 @@ In Rails 3.1+, the asset pipeline helps streamline the inclusion of stylesheets,
 
 This will tell Rails to load the `stately.scss` file in your vendor directory, which in turn loads Stately's `_setup.scss` and `_customizations.scss` stylesheets, giving you access to the Stately CSS classes described [in the documentation](https://github.com/intridea/stately).
 
-However, there default `@font-face` settings in Stately's `_setup.scss` file don't work with the Rails pipeline, because the paths it uses to load the fonts will no longer be correct. In fact, the asset pipeline makes the require paths simpler. Edit Stately's `_setup.scss` stylesheet so that its `@font-face { src: ` commands refer directly to the font file names, removing the relative path information:
+However, the default `@font-face` settings in Stately's `_setup.scss` file don't work with the Rails pipeline, because the paths it uses to load the fonts will no longer be correct. In fact, the asset pipeline makes the paths simpler. Edit Stately's `_setup.scss` stylesheet so that its `@font-face` `src:` commands refer directly to the font file names, removing the relative path information:
 
 ``` sass Edit Stately's @font-face Command (vendor/assets/stylesheets/_setup.scss)
 @font-face {

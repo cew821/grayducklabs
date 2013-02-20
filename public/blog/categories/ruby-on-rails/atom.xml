@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | Gray Duck Labs]]></title>
   <link href="http://www.grayducklabs.com/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://www.grayducklabs.com/"/>
-  <updated>2013-02-20T15:44:15-05:00</updated>
+  <updated>2013-02-20T17:19:35-05:00</updated>
   <id>http://www.grayducklabs.com/</id>
   <author>
     <name><![CDATA[Gray Duck Labs LLC.]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.grayducklabs.com/blog/2013/how-to-use-the-stately-webfont-in-a-rails-application/"/>
     <updated>2013-02-20T12:32:00-05:00</updated>
     <id>http://www.grayducklabs.com/blog/2013/how-to-use-the-stately-webfont-in-a-rails-application</id>
-    <content type="html"><![CDATA[<p>A few weeks ago, <a href="https://twitter.com/bpmarkowitz">Ben Markowitz</a>, a UX designer at <a href="http://www.intridea.com/">Intridea</a> released an open source web font called <a href="http://intridea.github.com/stately/">Stately</a>. Stately allows designers to make simple, great-looking U.S. map visualizations using only HTML and CSS. For example:</p>
+    <content type="html"><![CDATA[<p>A few weeks ago, <a href="https://twitter.com/bpmarkowitz">Ben Markowitz</a>, a UX designer at <a href="http://www.intridea.com/">Intridea</a>, released an open source web font called <a href="http://intridea.github.com/stately/">Stately</a>. Stately allows designers to make simple, great-looking U.S. map visualizations using only HTML and CSS. For example:</p>
 
 <p><img src="/images/posts/stately_example.jpg" title="[Example of a map created using Stately]" ></p>
 
@@ -60,7 +60,7 @@
 
 <p>This will tell Rails to load the <code>stately.scss</code> file in your vendor directory, which in turn loads Stately's <code>_setup.scss</code> and <code>_customizations.scss</code> stylesheets, giving you access to the Stately CSS classes described <a href="https://github.com/intridea/stately">in the documentation</a>.</p>
 
-<p>However, there default <code>@font-face</code> settings in Stately's <code>_setup.scss</code> file don't work with the Rails pipeline, because the paths it uses to load the fonts will no longer be correct. In fact, the asset pipeline makes the require paths simpler. Edit Stately's <code>_setup.scss</code> stylesheet so that its <code>@font-face { src:</code> commands refer directly to the font file names, removing the relative path information:</p>
+<p>However, the default <code>@font-face</code> settings in Stately's <code>_setup.scss</code> file don't work with the Rails pipeline, because the paths it uses to load the fonts will no longer be correct. In fact, the asset pipeline makes the paths simpler. Edit Stately's <code>_setup.scss</code> stylesheet so that its <code>@font-face</code> <code>src:</code> commands refer directly to the font file names, removing the relative path information:</p>
 
 <p>``` sass Edit Stately's @font-face Command (vendor/assets/stylesheets/_setup.scss)
 @font-face {</p>

@@ -7,7 +7,7 @@
 	<meta name="author" content="Gray Duck Labs LLC.">
 
 	
-	<meta name="description" content="A few weeks ago, Ben Markowitz, a UX designer at Intridea released an open source web font called Stately. Stately allows designers to make simple, &hellip;">
+	<meta name="description" content="A few weeks ago, Ben Markowitz, a UX designer at Intridea, released an open source web font called Stately. Stately allows designers to make simple, &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -69,7 +69,7 @@
 				<div id="content" class="inner">
 					<article class="post">
 	<h1 class="title">How to Use the Stately WebFont in a Rails Application</h1>
-	<div class="entry-content"><p>A few weeks ago, <a href="https://twitter.com/bpmarkowitz">Ben Markowitz</a>, a UX designer at <a href="http://www.intridea.com/">Intridea</a> released an open source web font called <a href="http://intridea.github.com/stately/">Stately</a>. Stately allows designers to make simple, great-looking U.S. map visualizations using only HTML and CSS. For example:</p>
+	<div class="entry-content"><p>A few weeks ago, <a href="https://twitter.com/bpmarkowitz">Ben Markowitz</a>, a UX designer at <a href="http://www.intridea.com/">Intridea</a>, released an open source web font called <a href="http://intridea.github.com/stately/">Stately</a>. Stately allows designers to make simple, great-looking U.S. map visualizations using only HTML and CSS. For example:</p>
 
 <p><img src="/images/posts/stately_example.jpg" title="[Example of a map created using Stately]" ></p>
 
@@ -113,7 +113,7 @@
 
 <p>This will tell Rails to load the <code>stately.scss</code> file in your vendor directory, which in turn loads Stately&#8217;s <code>_setup.scss</code> and <code>_customizations.scss</code> stylesheets, giving you access to the Stately CSS classes described <a href="https://github.com/intridea/stately">in the documentation</a>.</p>
 
-<p>However, there default <code>@font-face</code> settings in Stately&#8217;s <code>_setup.scss</code> file don&#8217;t work with the Rails pipeline, because the paths it uses to load the fonts will no longer be correct. In fact, the asset pipeline makes the require paths simpler. Edit Stately&#8217;s <code>_setup.scss</code> stylesheet so that its <code>@font-face { src:</code> commands refer directly to the font file names, removing the relative path information:</p>
+<p>However, the default <code>@font-face</code> settings in Stately&#8217;s <code>_setup.scss</code> file don&#8217;t work with the Rails pipeline, because the paths it uses to load the fonts will no longer be correct. In fact, the asset pipeline makes the paths simpler. Edit Stately&#8217;s <code>_setup.scss</code> stylesheet so that its <code>@font-face</code> <code>src:</code> commands refer directly to the font file names, removing the relative path information:</p>
 
 <figure class='code'><figcaption><span>Edit Stately&#8217;s @font-face Command (vendor/assets/stylesheets/_setup.scss)</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
