@@ -4,7 +4,7 @@
   <title><![CDATA[Gray Duck Labs]]></title>
   <link href="http://www.grayducklabs.com/atom.xml" rel="self"/>
   <link href="http://www.grayducklabs.com/"/>
-  <updated>2013-01-31T12:35:07-05:00</updated>
+  <updated>2013-02-20T15:44:15-05:00</updated>
   <id>http://www.grayducklabs.com/</id>
   <author>
     <name><![CDATA[Gray Duck Labs LLC.]]></name>
@@ -12,6 +12,101 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Use the Stately WebFont in a Rails Application]]></title>
+    <link href="http://www.grayducklabs.com/blog/2013/how-to-use-the-stately-webfont-in-a-rails-application/"/>
+    <updated>2013-02-20T12:32:00-05:00</updated>
+    <id>http://www.grayducklabs.com/blog/2013/how-to-use-the-stately-webfont-in-a-rails-application</id>
+    <content type="html"><![CDATA[<p>A few weeks ago, <a href="https://twitter.com/bpmarkowitz">Ben Markowitz</a>, a UX designer at <a href="http://www.intridea.com/">Intridea</a> released an open source web font called <a href="http://intridea.github.com/stately/">Stately</a>. Stately allows designers to make simple, great-looking U.S. map visualizations using only HTML and CSS. For example:</p>
+
+<p><img src="http://www.grayducklabs.com/images/posts/stately_example.jpg" title="[Example of a map created using Stately]" ></p>
+
+<p>Using Stately in a Rails application is pretty straightforward, but it does require a little configuration to get it to work with the Rails asset pipeline.</p>
+
+<!-- more -->
+
+
+<p><strong>Install Stately in Your Rails Application</strong></p>
+
+<p>First, <a href="https://github.com/intridea/stately">download Stately</a> from Github. The package includes several files, but the ones to focus on for Rails installation are in two directories:</p>
+
+<ul>
+<li><code>stately-master/assets/font</code> directory containing four web font files</li>
+<li><code>stately-master/assets/sass</code> directory containing four SASS files that handle the basic Stately CSS configuration, and allow you to customize the styles (i.e. assigning different colors to specific states).</li>
+</ul>
+
+
+<p>Copy the .scss files from the <code>stately-master/assets/sass</code> directory into the <code>vendor/assets/stylesheets</code> directory of your Rails application.</p>
+
+<p>Next, create a new directory in the vendor/assets folder to store your fonts, such as <code>vendor/assets/fonts</code>. Copy the four font files from <code>stately-master/assets/font</code> into this new fonts direcetory.</p>
+
+<p><strong>Configure the Rails Asset Pipeline to Recognize Stately</strong></p>
+
+<p>In Rails 3.1+, the asset pipeline helps streamline the inclusion of stylesheets, javascript, images and other assets (like fonts!) for use in your application. Rails manages the inclusion of these assets using manifest files, like the one included in <code>app/assets/stylesheets/application.css</code>. You need to edit this manifest to include Stately:</p>
+
+<figure class='code'><figcaption><span>Add Stately to the manifest file (app/assets/stylesheets/application.css)</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># ...</span>
+</span><span class='line'><span class="o">*=</span> <span class="n">require_self</span>
+</span><span class='line'><span class="o">*=</span> <span class="n">require_tree</span> <span class="o">.</span>
+</span><span class='line'><span class="o">*=</span> <span class="nb">require</span> <span class="n">stately</span>    <span class="c1"># add stately to the manifest</span>
+</span><span class='line'><span class="o">*/</span>
+</span><span class='line'><span class="c1"># ...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will tell Rails to load the <code>stately.scss</code> file in your vendor directory, which in turn loads Stately&#8217;s <code>_setup.scss</code> and <code>_customizations.scss</code> stylesheets, giving you access to the Stately CSS classes described <a href="https://github.com/intridea/stately">in the documentation</a>.</p>
+
+<p>However, there default <code>@font-face</code> settings in Stately&#8217;s <code>_setup.scss</code> file don&#8217;t work with the Rails pipeline, because the paths it uses to load the fonts will no longer be correct. In fact, the asset pipeline makes the require paths simpler. Edit Stately&#8217;s <code>_setup.scss</code> stylesheet so that its <code>@font-face { src:</code> commands refer directly to the font file names, removing the relative path information:</p>
+
+<figure class='code'><figcaption><span>Edit Stately&#8217;s @font-face Command (vendor/assets/stylesheets/_setup.scss)</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="k">@font-face</span> <span class="err">{</span>
+</span><span class='line'>    <span class="na">font-family</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">stately-webfont&#39;</span><span class="err">;</span>
+</span><span class='line'>    <span class="c1">// Remove &#39;../font/&#39; from URL load paths, as shown below:</span>
+</span><span class='line'>    <span class="na">src</span><span class="o">:</span> <span class="sx">url(&#39;stately-webfont.eot&#39;)</span><span class="err">;</span>
+</span><span class='line'>    <span class="na">src</span><span class="o">:</span> <span class="sx">url(&#39;stately-webfont.eot?#iefix&#39;)</span> <span class="nf">format</span><span class="p">(</span><span class="s1">&#39;</span><span class="s2">embedded-opentype&#39;</span><span class="p">)</span><span class="o">,</span>
+</span><span class='line'>         <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;</span><span class="s2">stately-webfont.woff&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;</span><span class="s2">woff&#39;</span><span class="o">),</span>
+</span><span class='line'>         <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;</span><span class="s2">stately-webfont.ttf&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;</span><span class="s2">truetype&#39;</span><span class="o">),</span>
+</span><span class='line'>         <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;</span><span class="s2">stately-webfont.svg#testfontRegular&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;</span><span class="s2">svg&#39;</span><span class="o">);</span>
+</span><span class='line'>    <span class="na">font-weight</span><span class="o">:</span> <span class="no">normal</span><span class="err">;</span>
+</span><span class='line'>    <span class="na">font-style</span><span class="o">:</span> <span class="no">normal</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span><span class='line'><span class="c1">//...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And that&#8217;s it! Now you should be able to use Stately by using the markup as shown in the <a href="https://github.com/intridea/stately">example documentation</a>. For example, to diplay an image of the nation&#8217;s best state, you would write the following HTML:</p>
+
+<figure class='code'><figcaption><span>How to use Stately In Your Markup</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;stately&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li</span> <span class="na">data-state=</span><span class="s">&quot;mn&quot;</span> <span class="na">class=</span><span class="s">&quot;MN&quot;</span><span class="nt">&gt;</span>X<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>What cool stuff have you built with Stately? Leave a link in the comments!</p>
+
+<p><em>Charles Worthington (<a href="http://www.twitter.com/cew821" title="Twitter">@cew821</a>) is a freelance product designer living in Washington, DC. He would love to <a href="mailto:%63%6f%6e%74%61%63%74@%67%72%61%79%64%75%63%6b%6c%61%62%73.%63%6f%6d" title="Email Us">hear from you</a>!</em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Free Design Idea: Fixing Conference Call Frustration with Software]]></title>
