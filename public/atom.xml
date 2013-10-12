@@ -4,7 +4,7 @@
   <title><![CDATA[Gray Duck Labs]]></title>
   <link href="http://www.grayducklabs.com/atom.xml" rel="self"/>
   <link href="http://www.grayducklabs.com/"/>
-  <updated>2013-06-03T18:15:07-04:00</updated>
+  <updated>2013-10-12T15:13:37-04:00</updated>
   <id>http://www.grayducklabs.com/</id>
   <author>
     <name><![CDATA[Gray Duck Labs LLC.]]></name>
@@ -12,6 +12,62 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Intelligently Deduplicating Records in Rails]]></title>
+    <link href="http://www.grayducklabs.com/blog/2013/how-to-sort-by-boolean-true-slash-false-value-in-ruby/"/>
+    <updated>2013-10-12T10:01:00-04:00</updated>
+    <id>http://www.grayducklabs.com/blog/2013/how-to-sort-by-boolean-true-slash-false-value-in-ruby</id>
+    <content type="html"><![CDATA[<p>I recently needed to write a deduplicate method in a <a href="http://www.preamp.fm">Rails app I built</a>. In the application, each artist <code>has_one</code> song. However, over the course of several months, several songs had been added to the database with the same <code>artist_id</code> as an existing song.</p>
+
+<p>Based on <a href="http://stackoverflow.com/questions/14124212/remove-duplicate-records-based-on-multiple-columns">this helpful post</a>, my deduplicate method looked like this:</p>
+
+<figure class='code'><figcaption><span>Deduplicating Records with the Same Parent ID</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Song</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">deduplicate</span>
+</span><span class='line'>    <span class="n">grouped</span> <span class="o">=</span> <span class="n">all</span><span class="o">.</span><span class="n">group_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">song</span><span class="o">|</span> <span class="n">song</span><span class="o">.</span><span class="n">artist_id</span> <span class="p">}</span>
+</span><span class='line'>    <span class="n">grouped</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">artist_songs</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">first_one</span> <span class="o">=</span> <span class="n">artist_songs</span><span class="o">.</span><span class="n">shift</span>
+</span><span class='line'>      <span class="n">artist_songs</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="nb">dup</span><span class="o">|</span> <span class="nb">dup</span><span class="o">.</span><span class="n">destroy</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This method groups every song by the song&#8217;s artist. For groupings with more than one song (i.e. songs that have the same <code>artist_id</code>), it keeps the first song and deletes all the rest.</p>
+
+<p>This works great, but it naively decides which duplicate record to destroy and which to keep.</p>
+
+<p>To make the deduplicating method &#8220;smarter&#8221; we can use <code>sort</code> and <code>sort_by</code> to influence which duplicate will be kept. For example, if we wanted to keep the duplicate song with the highest play count, we could add this line before the <code>shift</code> method call:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">artist_songs</span><span class="o">.</span><span class="n">sort!</span> <span class="p">{</span><span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">b</span><span class="o">.</span><span class="n">play_count</span> <span class="o">&lt;=&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">play_count</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This would ensure that the song &#8220;kept&#8221; using the <code>shift</code> method is the song with the highest play count.</p>
+
+<p>It&#8217;s also possible to sort records by boolean values using <code>sort_by</code>. This was useful for my method, because in cases where an artist had two songs, I preferred to keep the song that had been reviewed by a trusted editor vs. one that had not.</p>
+
+<p>The <code>sort</code> method doesn&#8217;t work with booleans, so we instead use <code>sort_by</code> and replace the booleans with integers to achieve the sort. I used the following line of code before the <code>shift</code> call:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">artist_songs</span><span class="o">.</span><span class="n">sort_by!</span> <span class="p">{</span> <span class="o">|</span><span class="n">song</span><span class="o">|</span> <span class="n">song</span><span class="o">.</span><span class="n">reviewed</span> <span class="p">?</span> <span class="mi">0</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, I have a concise, reusable method I can use to intelligently de-duplicate my songs.</p>
+
+<p><em>Charles Worthington (<a href="http://www.twitter.com/cew821" title="Twitter">@cew821</a>) is a freelance product designer living in Washington, DC. He would love to <a href="mailto:%63%6f%6e%74%61%63%74@%67%72%61%79%64%75%63%6b%6c%61%62%73.%63%6f%6d" title="Email Us">hear from you</a>!</em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Use the Stately WebFont in a Rails Application]]></title>
